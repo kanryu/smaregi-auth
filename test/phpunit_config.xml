@@ -1,0 +1,42 @@
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.5/phpunit.xsd"
+        backupGlobals="true"
+        backupStaticAttributes="false"
+        bootstrap="phpunit_bootstrap.php"
+        cacheTokens="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        timeoutForSmallTests="1"
+        timeoutForMediumTests="10"
+        timeoutForLargeTests="60"
+        verbose="false">
+
+    <php>
+        <env name="ENV_DIVISION" value="LOCAL" />
+        <ini name="display_errors" value="on" />
+    </php>
+
+    <testsuites>
+        <testsuite name="Test Services">
+            <directory suffix="Test.php">unit</directory>
+        </testsuite>
+    </testsuites>
+
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">doc_root</directory>
+            <exclude>
+                <directory suffix=".php">doc_root/libs</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>

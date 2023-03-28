@@ -1,0 +1,32 @@
+{
+    "name": "kanryu/smaregi-auth",
+    "description": "A library that handles the procedures required for initial authentication of the Smaregi platform API.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kanryu\\SmaregiAuth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "KATO Kanryu",
+            "email": "k.kanryu@gmail.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "7.1"
+        },
+        "sort-packages": true
+    },
+    "require": {
+        "php": ">=7.1",
+        "guzzlehttp/guzzle": "^6.3",
+        "psr/log": "^1.1"
+    },
+    "require-dev": {
+        "apigen/apigen": "^4.1",
+        "phpunit/phpunit": "^7.5"
+    }
+}
